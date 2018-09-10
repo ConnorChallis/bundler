@@ -2,10 +2,12 @@
 # frozen_string_literal: true
 
 require "pathname"
+require "open3"
 
 def run(*cmd)
-  return if system(*cmd, :out => IO::NULL)
-  raise "Running `#{cmd.join(" ")}` failed"
+  output, status = Open3.capture2e(*cmd)
+  return if status.success?
+  raise "Running `#{cmd.join(" ")}` failed: #{output}"
 end
 
 version = ENV.delete("RGV")
