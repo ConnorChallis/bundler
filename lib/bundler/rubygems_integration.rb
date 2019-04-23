@@ -309,6 +309,10 @@ module Bundler
       provides?(">= 2.5.2")
     end
 
+    def has_bundler_version_finder?
+      provides?(">= 2.7.0")
+    end
+
     def replace_gem(specs, specs_by_name)
       reverse_rubygems_kernel_mixin
 

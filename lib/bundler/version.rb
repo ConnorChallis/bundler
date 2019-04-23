@@ -1,7 +1,9 @@
 # frozen_string_literal: false
 
+require_relative "rubygems_integration"
+
 module Bundler
-  if Gem::Requirement.new(">= 2.7.0").satisfied_by?(Gem::Version.create(Gem::VERSION))
+  if Bundler.rubygems.has_bundler_version_finder?
     VERSION = "2.1.0.pre.1".freeze
   else
     # We're doing this because we might write tests that deal
