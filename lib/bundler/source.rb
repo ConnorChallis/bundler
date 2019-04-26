@@ -2,7 +2,7 @@
 
 module Bundler
   class Source
-    autoload :Gemspec,  "bundler/source/gemspec"
+    autoload :Gemspec,  File.expand_path("source/gemspec", __dir__)
     autoload :Git,      "bundler/source/git"
     autoload :Metadata, "bundler/source/metadata"
     autoload :Path,     "bundler/source/path"

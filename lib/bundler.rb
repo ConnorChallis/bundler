@@ -27,28 +27,28 @@ module Bundler
   autoload :DepProxy,               "bundler/dep_proxy"
   autoload :Deprecate,              "bundler/deprecate"
   autoload :Dsl,                    "bundler/dsl"
-  autoload :EndpointSpecification,  "bundler/endpoint_specification"
+  autoload :EndpointSpecification,  File.expand_path("bundler/endpoint_specification", __dir__)
   autoload :Env,                    "bundler/env"
   autoload :Fetcher,                "bundler/fetcher"
   autoload :FeatureFlag,            "bundler/feature_flag"
   autoload :GemHelper,              "bundler/gem_helper"
-  autoload :GemHelpers,             "bundler/gem_helpers"
+  autoload :GemHelpers,             File.expand_path("bundler/gem_helpers", __dir__)
   autoload :GemRemoteFetcher,       "bundler/gem_remote_fetcher"
   autoload :GemVersionPromoter,     "bundler/gem_version_promoter"
   autoload :Graph,                  "bundler/graph"
   autoload :Index,                  "bundler/index"
   autoload :Injector,               "bundler/injector"
   autoload :Installer,              "bundler/installer"
-  autoload :LazySpecification,      "bundler/lazy_specification"
+  autoload :LazySpecification,      File.expand_path("bundler/lazy_specification", __dir__)
   autoload :LockfileParser,         "bundler/lockfile_parser"
-  autoload :MatchPlatform,          "bundler/match_platform"
+  autoload :MatchPlatform,          File.expand_path("bundler/match_platform", __dir__)
   autoload :ProcessLock,            "bundler/process_lock"
-  autoload :RemoteSpecification,    "bundler/remote_specification"
+  autoload :RemoteSpecification,    File.expand_path("bundler/remote_specification", __dir__)
   autoload :Resolver,               "bundler/resolver"
   autoload :Retry,                  "bundler/retry"
   autoload :RubyDsl,                "bundler/ruby_dsl"
   autoload :RubyGemsGemInstaller,   "bundler/rubygems_gem_installer"
-  autoload :RubyVersion,            "bundler/ruby_version"
+  autoload :RubyVersion,            File.expand_path("bundler/ruby_version", __dir__)
   autoload :Runtime,                "bundler/runtime"
   autoload :Settings,               "bundler/settings"
   autoload :SharedHelpers,          "bundler/shared_helpers"
@@ -56,7 +56,7 @@ module Bundler
   autoload :SourceList,             "bundler/source_list"
   autoload :SpecSet,                "bundler/spec_set"
   autoload :StubSpecification,      "bundler/stub_specification"
-  autoload :UI,                     "bundler/ui"
+  autoload :UI,                     File.expand_path("bundler/ui", __dir__)
   autoload :URICredentialsFilter,   "bundler/uri_credentials_filter"
   autoload :VersionRanges,          "bundler/version_ranges"
 
