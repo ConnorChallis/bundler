@@ -13,6 +13,7 @@ branches:
     - trying
     - /.+-dev$/
     - /.+-stable$/
+    - remove_dep_deps_plus_with_rubygems_error_messages
 
 cache:
   directories:
